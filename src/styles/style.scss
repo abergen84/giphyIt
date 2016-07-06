@@ -4,7 +4,50 @@
 }
 
 h1 {
-	font-size: 300px;
+	font-size: 72px;
 	text-align: center;
 	color: fuchsia;
 }
+
+.container {
+
+	#overlay {
+		height: 100vh;
+		position: fixed;
+		width: 100%;
+		opacity: .8;
+		background: #333;
+		top: 0;
+		left: 0;
+	}
+
+	#giphyContainer {
+		display: flex;
+		overflow: scroll;
+
+		.giph {
+			flex: 1;
+			max-width: 100%;
+			img {
+				height: 100px;		
+			}
+			
+		}
+		.active {
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			border: 5px solid black;
+			z-index: 100;
+			// width: 500px;
+			img {
+				// width: 100%;
+			}
+		}
+	} //giphyContainer
+
+
+
+} //main container
+

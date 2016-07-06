@@ -1,15 +1,50 @@
 import React from 'react'
 import ReactDOM from 'react-dom'	
+import Backbone from 'backbone'
+import AppView from './AppView.js'
+
 
 const app = function() {
 
-	const Header = React.createClass({
-		render: () => {
-			return <h1>YOLO</h1>
-		}
-	})
+var GiphyCollection = Backbone.Collection.extend({
+	url: "http://api.giphy.com/v1/gifs/search",
+	api_key: "dc6zaTOxFJmzC",
+	parse: function(rawJSON){
+		console.log(rawJSON)
+		return rawJSON.data
+	}
+})
 
-	ReactDOM.render(<Header/>,document.querySelector('.container'))
+const Router = Backbone.Router.extend({
+	routes: {
+		"search/:query": "goSearch",
+		"home": "goHome",
+		"*catchall": "routeHome"
+	},
+
+	initialize: function(){
+		Backbone.history.start()
+	},
+
+	goSearch: function(query){
+		var giphyColl = new GiphyCollection()
+		
+		giphyColl.fetch({
+			data: {
+				api_key: giphyColl.api_key,
+				q: query
+			}
+		})
+		ReactDOM.render(<AppView giphyColl={giphyColl} />, document.querySelector('.container'))
+	},
+
+
+})
+
+var route = new Router()
+
+
+
 }
 
 app()
