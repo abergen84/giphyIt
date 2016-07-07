@@ -27,13 +27,15 @@ const AppView = React.createClass({
 		})
 	},
 
-	// _setNewFocus: function(){
-	// 	Backbone.Events.on('newFocusId', function(){
-	// 		this.setState({
-
-	// 		})
-	// 	})
-	// },
+	componentWillReceiveProps: function(nextProps){
+		console.log('will receive props')
+		nextProps.giphyColl.on('sync', () => {
+			console.log('sync fired')
+			this.setState({
+				giphyColl: this.props.giphyColl
+			})
+		})
+	},
 
 	render: function(){
 		// console.log(this.state.giphyColl.models)
