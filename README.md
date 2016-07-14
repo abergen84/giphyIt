@@ -1,38 +1,19 @@
-#TIY Starter Kit
+#giphyIt
 
-Lightweight scaffolding and build tools to quickly and easily develop a web application. 
+##Overview
 
-  - transpiles scss into css
-  - transpiles es6 and jsx into es5
-  - concatenates all required/imported modules together into one minified file
-  - runs a simple express server that is deployable on heroku
-  
-##Getting started
+Ever find yourself needing a slick GIF in a key moment? Yea, you could Google search
+for whatever GIF you want, or you could head over to Giphy.com and pour through
+their extensive collection. Or, you could fire up this app, enter your search, and
+find the first 25 hits relating to your search term, all in a minimized, clean interface.
 
-  - clone this repo with `git clone git@github.com:magentanova/tiy-starter-kit.git THE-LOCAL-FOLDER-YOU-WANT-TO-CREATE`
-  - disconnect from my remote repo and point to your own (see [Publishing](#publishing))
-  - `cd` into the local folder
-  - `npm install`
-  - `npm run go`
-  - that's it! visit [http://localhost:3000](http://localhost:3000) to make sure it's working
-  
-##Workflow
-  
-  - you'll *only* write code in the files in the `src/` folder
-  - every time you save in that folder, your code will be read and transpiled into the `dist/` folder. only files in `dist/` will be served up to the browser.
-  - view and test your app at localhost:3000
-  
-##Publishing
+##Features
 
-  - disconnect your local repo from this one with `git remote remove origin`
-  - `hub create YOUR-APP-NAME` -- this will simultaneously (1) create you a remote repo with the given name and (2) create a local reference connecting the directory you're in to the remote you just created
-  - add, commit and push per usual
+- Search bar to enter your search terms
+- Displays first 25 gifs that relate to your search
+- Each GIF is clickable and expands on screen so you can get a better look
 
-##Deploying 
+##The Nitty Gritty
 
-The easiest thing to do is deploy to heroku. Once you have an account and you've installed the heroku command line tools, simply run: 
- 
-  - `heroku create YOUR-APP-NAME`
-  - `git push origin heroku`
-
-Have fun!
+- Uses Giphy API to fetch data
+- React and Backbone to handle all the fun stuff
