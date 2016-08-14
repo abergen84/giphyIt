@@ -3,9 +3,10 @@
 ##Overview
 
 Ever find yourself needing a slick GIF in a key moment? Yea, you could Google search
-for whatever GIF you want, or you could head over to Giphy.com and pour through
+for whatever GIF you want, or you could head over to Giphy.com and pore through
 their extensive collection. Or, you could fire up this app, enter your search, and
-find the first 25 hits relating to your search term, all in a minimized, clean interface.
+find the first 25 hits relating to your search term, all in a minimized interface.
+Click on a gif to have it expand to full size.
 
 ##Features
 
@@ -16,4 +17,5 @@ find the first 25 hits relating to your search term, all in a minimized, clean i
 ##The Nitty Gritty
 
 - Uses Giphy API to fetch data
-- React and Backbone to handle all the fun stuff
+- React for the views
+- Backbone to handle all the fun stuff like models and collection
