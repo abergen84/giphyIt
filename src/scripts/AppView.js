@@ -71,7 +71,7 @@ const Header = React.createClass({
 	render: function(){
 		return(
 			<header id="mainheader">
-				<h1>Giphy App</h1>
+				<h1>In a Giphy</h1>
 				<input type="text" placeholder="search" onKeyDown={this._handleKeyDown}/>
 			</header>
 			)

@@ -1,12 +1,15 @@
+@import 'https://fonts.googleapis.com/css?family=Abril+Fatface';
+
 * {
 	font-family: Helvetica, Arial, sans-serif;
 	box-sizing: border-box;
 }
 
 h1 {
+	font-family: "Abril Fatface";
 	font-size: 72px;
 	text-align: center;
-	color: fuchsia;
+	letter-spacing: 3px;
 }
 
 .container {
@@ -23,11 +26,13 @@ h1 {
 
 	#giphyContainer {
 		display: flex;
-		overflow: scroll;
+		flex-wrap: wrap;
+		// overflow: scroll;
 
 		.giph {
 			flex: 1;
 			max-width: 100%;
+			margin: 10px;
 			img {
 				height: 100px;		
 			}
@@ -40,12 +45,26 @@ h1 {
 			transform: translate(-50%, -50%);
 			border: 5px solid black;
 			z-index: 100;
+			background: linear-gradient(
+			    rgba(0, 0, 0, 0.4), 
+			    rgba(0, 0, 0, 0.4)
+			    );
 			// width: 500px;
 			img {
-				// width: 100%;
+				width: 100%;
+				height: auto;
 			}
 		}
 	} //giphyContainer
+	#mainheader {
+		input {
+			width: 300px;
+			margin: 20px auto;
+			display: block;
+			font-size: 16px;
+			font-family: "Abril Fatface";
+		}
+	}
 
 
 

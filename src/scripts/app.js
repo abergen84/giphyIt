@@ -24,6 +24,7 @@ const Router = Backbone.Router.extend({
 
 	initialize: function(){
 		Backbone.history.start()
+		console.log('initialize')
 	},
 
 	goSearch: function(query){
@@ -38,10 +39,19 @@ const Router = Backbone.Router.extend({
 		ReactDOM.render(<AppView giphyColl={giphyColl} />, document.querySelector('.container'))
 	},
 
+	routeHome: function(){
+		console.log('test')
+		location.hash = "search/cats"
+	}
+
+	// goHome(){
+	// 	ReactDOM.render(<AppView giphyColl={giphyColl} />, document.querySelector('.container'))	
+	// }
+
 
 })
 
-var route = new Router()
+new Router()
 
 
 
